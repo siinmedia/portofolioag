@@ -187,6 +187,7 @@ export const content = {
         ],
         stack: ["PHP", "Web App", "Transportation"],
         url: "https://ternoae.web.id",
+        cta: "Lihat Live",
       },
       {
         index: "06",
@@ -415,6 +416,7 @@ export const content = {
         ],
         stack: ["PHP", "Web App", "Transportation"],
         url: "https://ternoae.web.id",
+        cta: "View Live",
       },
       {
         index: "06",

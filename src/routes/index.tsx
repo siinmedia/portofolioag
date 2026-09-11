@@ -739,12 +739,13 @@ function Index() {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.projects.map((p, i) => {
             const spanClass = [
-              "sm:col-span-2 lg:col-span-2", // 01 CRM - besar kiri (baris 1)
+              "sm:col-span-2 lg:col-span-2", // 01 CRM Leads - besar kiri (baris 1)
               "sm:col-span-1 lg:col-span-1", // 02 Inventaris - kecil kanan (baris 1)
               "sm:col-span-1 lg:col-span-1", // 03 Konten - kecil kiri (baris 2)
               "sm:col-span-2 lg:col-span-2", // 04 Landing Page - besar kanan (baris 2)
               "sm:col-span-1 lg:col-span-2", // 05 TernoAE - besar kiri (baris 3)
               "sm:col-span-1 lg:col-span-1", // 06 QRIS API - kecil kanan (baris 3)
+              "sm:col-span-2 lg:col-span-3", // 07 Analitik Konten - full width (baris 4)
             ][i] ?? "";
             const large = i === 0 || i === 3 || i === 4;
             return (
@@ -797,6 +798,7 @@ function ProjectCard({
 }) {
   const url = "url" in project ? project.url : undefined;
   const internal = "internal" in project && project.internal === true;
+  const cta = "cta" in project ? project.cta : undefined;
   const tone = featured
     ? "bg-primary text-primary-foreground"
     : dark
@@ -804,24 +806,21 @@ function ProjectCard({
       : "border border-ink/25 hover:border-ink";
   const interactive =
     "transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl active:scale-[0.99]";
-  const urlLabel = url
-    ? internal
-      ? url.replace(/^\//, "")
-      : url.replace(/^https?:\/\//, "").replace(/\/$/, "")
-    : undefined;
   const inner = (
-    <>
+    <div className="flex h-full flex-col">
       <div className="flex items-start justify-between gap-3">
         <span className="select-none text-[11px] font-semibold tracking-widest opacity-70">
           {project.index}
         </span>
-        <ArrowUpRight
-          className={`h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 ${
-            internal ? "rotate-90" : ""
-          }`}
-        />
+        {url ? (
+          <ArrowUpRight
+            className={`h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 ${
+              internal ? "rotate-90" : ""
+            }`}
+          />
+        ) : null}
       </div>
-      <div className={large ? "mt-10" : "mt-8"}>
+      <div className={`flex flex-1 flex-col ${large ? "mt-8" : "mt-6"}`}>
         <h3
           className={`font-bold leading-tight tracking-tight ${
             featured ? "text-2xl sm:text-3xl" : large ? "text-xl sm:text-2xl" : "text-lg"
@@ -848,12 +847,9 @@ function ProjectCard({
             </li>
           ))}
         </ul>
-        {urlLabel ? (
-          <p className="mt-4 inline-flex items-center gap-1.5 text-[12px] font-semibold underline decoration-1 underline-offset-4 opacity-90">
-            {urlLabel}
-          </p>
-        ) : null}
-        <div className="mt-4 flex flex-wrap gap-1.5">
+      </div>
+      <div className="mt-4">
+        <div className="flex flex-wrap gap-1.5">
           {project.stack.map((s) => (
             <span
               key={s}
@@ -863,37 +859,35 @@ function ProjectCard({
             </span>
           ))}
         </div>
+        {url && cta ? (
+          <div className="mt-4">
+            {internal ? (
+              <Link
+                to={url as "/" | "/api-docs"}
+                className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[12px] font-bold text-ink-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+              >
+                {cta}
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+            ) : (
+              <a
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[12px] font-bold text-ink-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+              >
+                {cta}
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+            )}
+          </div>
+        ) : null}
       </div>
-    </>
+    </div>
   );
 
-  const cardClass = `group rounded-2xl p-6 ${tone} ${interactive} ${spanClass}`;
-
-  if (url && internal) {
-    return (
-      <Link to={url as "/" | "/api-docs"} className={cardClass}>
-        {inner}
-      </Link>
-    );
-  }
-  if (url) {
-    return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noreferrer"
-        className={cardClass}
-      >
-        {inner}
-      </a>
-    );
-  }
   return (
-    <article
-      className={`group flex h-full flex-col justify-between rounded-2xl p-6 ${tone} ${
-        dark ? "" : interactive
-      } ${spanClass}`}
-    >
+    <article className={`group flex h-full flex-col rounded-2xl p-6 ${tone} ${interactive} ${spanClass}`}>
       {inner}
     </article>
   );
