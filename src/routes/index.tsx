@@ -14,15 +14,10 @@ import {
   Phone,
   MapPin,
   Languages,
-  Loader2,
-  Check,
-  Copy,
-  QrCode,
   Coins,
 } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import { content, type Lang } from "@/lib/cv-content";
-import { generateQris } from "@/lib/qris";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -162,209 +157,6 @@ function Section({
     <section id={id} className={`scroll-mt-24 px-4 py-12 sm:px-8 sm:py-16 ${className}`}>
       <div className="mx-auto w-full max-w-6xl">{children}</div>
     </section>
-  );
-}
-
-/* ---------- QRIS ---------- */
-
-async function qrDataUrl(text: string): Promise<string> {
-  // Dynamic import biar library QR hanya ke-load saat user klik "Buat QRIS"
-  const mod = await import("qrcode");
-  const toDataURL = (mod.default?.toDataURL ?? mod.toDataURL) as
-    | ((text: string, options?: unknown) => Promise<string>)
-    | undefined;
-  if (!toDataURL) throw new Error("qrcode module unavailable");
-  return toDataURL(text, {
-    width: 720,
-    margin: 2,
-    errorCorrectionLevel: "M",
-    color: { dark: "#111111", light: "#ffffff" },
-  });
-}
-
-function SupportSection({ t }: { t: (typeof content)["id"] }) {
-  const presetAmounts = [...t.support.amounts];
-  const [amount, setAmount] = useState<number>(presetAmounts[0] ?? 10000);
-  const [custom, setCustom] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [qr, setQr] = useState<string | null>(null);
-  const [qrString, setQrString] = useState("");
-  const [error, setError] = useState("");
-  const [notConfigured, setNotConfigured] = useState(false);
-  const [copied, setCopied] = useState(false);
-
-  const isCustom = custom.trim() !== "";
-  const currentAmount = isCustom ? Number.parseInt(custom, 10) : amount;
-
-  const handleGenerate = async () => {
-    setError("");
-    setCopied(false);
-    setQr(null);
-    setQrString("");
-
-    const value = Number.parseInt(custom.trim(), 10);
-    const finalAmount = custom.trim() !== "" ? value : amount;
-    if (!Number.isFinite(finalAmount) || finalAmount <= 0) {
-      setError(t.support.errorPrefix);
-      return;
-    }
-
-    setLoading(true);
-    try {
-      const res = await generateQris({ data: { amount: finalAmount } });
-      if (!res.ok) {
-        if (!res.configured) {
-          setNotConfigured(true);
-        } else {
-          setError(res.error || t.support.errorPrefix);
-        }
-        return;
-      }
-      const dataUrl = await qrDataUrl(res.qrisString);
-      setQr(dataUrl);
-      setQrString(res.qrisString);
-    } catch {
-      setError(t.support.errorPrefix);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleCopy = async () => {
-    if (!qrString) return;
-    try {
-      await navigator.clipboard.writeText(qrString);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setCopied(false);
-    }
-  };
-
-  return (
-    <Section id="support" className="border-t border-ink/15">
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
-            {t.support.kicker}
-          </p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
-            {t.support.title}
-          </h2>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground sm:text-[15px]">
-            {t.support.subtitle}
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-ink/25 bg-card p-5 sm:p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            {t.support.label}
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {presetAmounts.map((a) => (
-              <button
-                key={a}
-                type="button"
-                onClick={() => {
-                  setAmount(a);
-                  setCustom("");
-                  setError("");
-                }}
-                aria-pressed={!isCustom && amount === a}
-                className={`${btnBase} rounded-full px-4 py-2 text-sm font-semibold ${
-                  !isCustom && amount === a
-                    ? "bg-ink text-ink-foreground"
-                    : "border border-ink/25 text-ink hover:border-ink"
-                }`}
-              >
-                Rp {a.toLocaleString("id-ID")}
-              </button>
-            ))}
-          </div>
-
-          <div className="mt-3 flex items-center gap-2">
-            <span className="text-sm font-medium text-muted-foreground">Rp</span>
-            <input
-              type="number"
-              inputMode="numeric"
-              min={1}
-              placeholder={t.support.customPlaceholder}
-              value={custom}
-              onChange={(e) => {
-                setCustom(e.target.value);
-                setError("");
-              }}
-              className="h-10 w-full min-w-0 flex-1 rounded-xl border border-ink/25 bg-background px-3 text-sm outline-none transition-colors focus:border-ink focus:ring-2 focus:ring-primary/30"
-            />
-          </div>
-
-          <button
-            type="button"
-            onClick={handleGenerate}
-            disabled={loading}
-            className={`${btnBase} mt-4 w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:-translate-y-0.5 hover:shadow-lg`}
-          >
-            {loading ? (
-              <>
-                <Loader2 className="h-4 w-4 animate-spin" />
-                {t.support.generating}
-              </>
-            ) : (
-              <>
-                <QrCode className="h-4 w-4" />
-                {t.support.generate}
-              </>
-            )}
-          </button>
-
-          {notConfigured ? (
-            <p className="mt-3 rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-xs leading-relaxed text-destructive">
-              {t.support.notConfigured}
-            </p>
-          ) : null}
-          {!notConfigured && error ? (
-            <p className="mt-3 rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-xs text-destructive">
-              {error}
-            </p>
-          ) : null}
-
-          {qr ? (
-            <div className="mt-5 rounded-2xl border border-ink/15 bg-background p-5">
-              <p className="text-center text-sm font-bold">
-                Rp {currentAmount.toLocaleString("id-ID")}
-              </p>
-              <img
-                src={qr}
-                alt={`QRIS ${currentAmount.toLocaleString("id-ID")}`}
-                width={240}
-                height={240}
-                className="mx-auto mt-3 h-56 w-56 rounded-xl bg-white p-2"
-              />
-              <p className="mt-3 text-center text-[11px] text-muted-foreground">
-                {t.support.note}
-              </p>
-              <button
-                type="button"
-                onClick={handleCopy}
-                className={`${btnBase} mt-3 w-full rounded-xl border border-ink/25 px-4 py-2.5 text-sm font-semibold text-ink hover:border-ink`}
-              >
-                {copied ? (
-                  <>
-                    <Check className="h-4 w-4" />
-                    {t.support.copied}
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-4 w-4" />
-                    {t.support.copyQris}
-                  </>
-                )}
-              </button>
-            </div>
-          ) : null}
-        </div>
-      </div>
-    </Section>
   );
 }
 
@@ -761,9 +553,6 @@ function Index() {
           })}
         </div>
       </Section>
-
-      {/* Support */}
-      <SupportSection t={t} />
 
       <footer className="border-t border-ink/15 bg-background/80 backdrop-blur">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-6 sm:px-8">
