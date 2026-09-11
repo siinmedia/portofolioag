@@ -213,6 +213,8 @@ export const content = {
         stack: ["Web App", "Analytics", "SaaS"],
         url: "https://demo.kasihkreasi.web.id/login",
         cta: "Lihat Demo",
+        sourceUrl: "https://github.com/siinmedia/analisakonten",
+        sourceLabel: "Source",
       },
     ],
     hardskills: [
@@ -455,6 +457,8 @@ export const content = {
         stack: ["Web App", "Analytics", "SaaS"],
         url: "https://demo.kasihkreasi.web.id/login",
         cta: "View Demo",
+        sourceUrl: "https://github.com/siinmedia/analisakonten",
+        sourceLabel: "Source",
       },
     ],
     hardskills: [

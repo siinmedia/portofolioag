@@ -799,6 +799,8 @@ function ProjectCard({
   const url = "url" in project ? project.url : undefined;
   const internal = "internal" in project && project.internal === true;
   const cta = "cta" in project ? project.cta : undefined;
+  const sourceUrl = "sourceUrl" in project ? project.sourceUrl : undefined;
+  const sourceLabel = "sourceLabel" in project ? project.sourceLabel : undefined;
   const tone = featured
     ? "bg-primary text-primary-foreground"
     : dark
@@ -859,29 +861,42 @@ function ProjectCard({
             </span>
           ))}
         </div>
-        {url && cta ? (
-          <div className="mt-4">
-            {internal ? (
-              <Link
-                to={url as "/" | "/api-docs"}
-                className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[12px] font-bold text-ink-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
-              >
-                {cta}
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </Link>
-            ) : (
-              <a
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[12px] font-bold text-ink-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
-              >
-                {cta}
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
-            )}
-          </div>
-        ) : null}
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          {url && cta ? (
+            <>
+              {internal ? (
+                <Link
+                  to={url as "/" | "/api-docs"}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[12px] font-bold text-ink-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+                >
+                  {cta}
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </Link>
+              ) : (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[12px] font-bold text-ink-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+                >
+                  {cta}
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              )}
+            </>
+          ) : null}
+          {sourceUrl ? (
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-current/40 px-4 py-2 text-[12px] font-semibold opacity-90 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-100 hover:shadow-md active:scale-95"
+            >
+              <Github className="h-3.5 w-3.5" />
+              {sourceLabel ?? "Source"}
+            </a>
+          ) : null}
+        </div>
       </div>
     </div>
   );
