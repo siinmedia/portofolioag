@@ -820,7 +820,7 @@ function ProjectCard({
           />
         ) : null}
       </div>
-      <div className={`flex flex-1 flex-col ${large ? "mt-8" : "mt-6"}`}>
+      <div className={`flex flex-1 flex-col ${large ? "mt-6" : "mt-4"}`}>
         <h3
           className={`font-bold leading-tight tracking-tight ${
             featured ? "text-2xl sm:text-3xl" : large ? "text-xl sm:text-2xl" : "text-lg"
@@ -887,7 +887,7 @@ function ProjectCard({
   );
 
   return (
-    <article className={`group flex h-full flex-col rounded-2xl p-6 ${tone} ${interactive} ${spanClass}`}>
+    <article className={`group flex h-full flex-col rounded-2xl p-5 ${tone} ${interactive} ${spanClass}`}>
       {inner}
     </article>
   );

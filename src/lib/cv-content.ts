@@ -200,6 +200,19 @@ export const content = {
         stack: ["REST API", "JSON", "QRIS"],
         url: "/api-docs",
         internal: true,
+        cta: "Buka API Docs",
+      },
+      {
+        index: "07",
+        title: "Platform Analitik Konten",
+        summary: "Web SaaS analitik konten untuk memantau performa postingan lintas platform.",
+        bullets: [
+          "Dashboard analitik konten: views, engagement, like, komentar lintas platform.",
+          "Memantau performa konten sebagai dasar strategi organik yang terukur.",
+        ],
+        stack: ["Web App", "Analytics", "SaaS"],
+        url: "https://demo.kasihkreasi.web.id/login",
+        cta: "Lihat Demo",
       },
     ],
     hardskills: [
@@ -429,6 +442,19 @@ export const content = {
         stack: ["REST API", "JSON", "QRIS"],
         url: "/api-docs",
         internal: true,
+        cta: "Open API Docs",
+      },
+      {
+        index: "07",
+        title: "Content Analytics Platform",
+        summary: "A web SaaS for content analytics to monitor post performance across platforms.",
+        bullets: [
+          "Content analytics dashboard: views, engagement, likes, comments across platforms.",
+          "Track content performance as the basis for measurable organic strategy.",
+        ],
+        stack: ["Web App", "Analytics", "SaaS"],
+        url: "https://demo.kasihkreasi.web.id/login",
+        cta: "View Demo",
       },
     ],
     hardskills: [
