@@ -29,7 +29,7 @@ export const content = {
     hello: "Halo,",
     myName: ["Nama saya", "Angger"],
     photoCaption:
-      "Dari strategi konten ke sistem yang benar-benar dipakai — solusi digital yang efektif untuk kebutuhan bisnis.",
+      "Dari strategi konten ke sistem yang benar-benar dipakai - solusi digital yang efektif untuk kebutuhan bisnis.",
     introduction: "Perkenalan",
     introTitle: "Web Developer & Digital Marketing Specialist",
     introBody: [
@@ -85,18 +85,18 @@ export const content = {
     ctaKicker: "Kolaborasi",
     ctaTitle: "Mari Bekerja Sama",
     ctaBody:
-      "Punya proyek, butuh sistem internal, atau mau mengembangkan brand? Ceritakan kebutuhanmu — saya bantu wujudkan.",
+      "Punya proyek, butuh sistem internal, atau mau mengembangkan brand? Ceritakan kebutuhanmu - saya bantu wujudkan.",
     ctaWhatsapp: "Chat WhatsApp",
     ctaEmail: "Kirim Email",
     ctaDownload: "Download CV",
     present: "Sekarang",
     jobs: [
       {
-        period: "Des 2025 — Sekarang",
+        period: "Des 2025 - Sekarang",
         role: "PHP Web Developer",
         company: "CV Maha Niaga Artha",
         bullets: [
-          "Membangun CRM Leads — dari flow lead hingga handle customer, lengkap dengan data analisis — dalam 1 bulan.",
+          "Membangun CRM Leads - dari flow lead hingga handle customer, lengkap dengan data analisis - dalam 1 bulan.",
           "Membangun sistem inventaris dalam 6 minggu: mengelola 376 item + sub item dan mendukung proses stock opname.",
           "Membangun sistem perencanaan konten dalam 2 minggu dengan flow multi-role & multi-account serta data analisis lengkap.",
           "Membangun HRIS KPI dalam 4 minggu: flow HR, absensi, dan payroll dengan notifikasi email + setup Meta WABA.",
@@ -109,7 +109,7 @@ export const content = {
         footerItems: ["CRM Leads", "Sistem Inventaris Internal", "Sistem Perencanaan Konten", "HRIS KPI"],
       },
       {
-        period: "Nov 2022 — Des 2025",
+        period: "Nov 2022 - Des 2025",
         role: "Social Media Marketing Specialist",
         company: "CV Maha Niaga Artha",
         bullets: [
@@ -191,7 +191,7 @@ export const content = {
         title: "QRIS Dynamic API",
         summary: "REST API untuk generate QRIS dinamis dari kode statis dengan nominal yang bisa diatur.",
         bullets: [
-          "Endpoint POST JSON — kirim QRIS statis + nominal, terima QRIS dinamis siap scan.",
+          "Endpoint POST JSON - kirim QRIS statis + nominal, terima QRIS dinamis siap scan.",
           "Digunakan untuk integrasi pembayaran, donasi, atau top-up pada sistem internal.",
         ],
         stack: ["REST API", "JSON", "QRIS"],
@@ -270,7 +270,7 @@ export const content = {
     hello: "Hello,",
     myName: ["My name", "is Angger"],
     photoCaption:
-      "From content strategy to systems people actually use — effective digital solutions for real business needs.",
+      "From content strategy to systems people actually use - effective digital solutions for real business needs.",
     introduction: "Introduction",
     introTitle: "Web Developer & Digital Marketing Specialist",
     introBody: [
@@ -326,18 +326,18 @@ export const content = {
     ctaKicker: "Collaboration",
     ctaTitle: "Let's Work Together",
     ctaBody:
-      "Have a project, need an internal system, or want to grow a brand? Tell me what you need — I'll help you build it.",
+      "Have a project, need an internal system, or want to grow a brand? Tell me what you need - I'll help you build it.",
     ctaWhatsapp: "Chat on WhatsApp",
     ctaEmail: "Send Email",
     ctaDownload: "Download CV",
     present: "Present",
     jobs: [
       {
-        period: "Dec 2025 — Present",
+        period: "Dec 2025 - Present",
         role: "PHP Web Developer",
         company: "CV Maha Niaga Artha",
         bullets: [
-          "Built a CRM Leads system — from lead flow to customer handling with data analytics — in 1 month.",
+          "Built a CRM Leads system - from lead flow to customer handling with data analytics - in 1 month.",
           "Built the inventory system in 6 weeks: managing 376 items + sub-items and supporting stock opname.",
           "Built the content planning system in 2 weeks with multi-role & multi-account flows plus full data analytics.",
           "Built an HRIS KPI system in 4 weeks: HR, attendance, and payroll flows with email notifications + Meta WABA setup.",
@@ -350,7 +350,7 @@ export const content = {
         footerItems: ["CRM Leads", "Internal Inventory System", "Content Planning System", "HRIS KPI"],
       },
       {
-        period: "Nov 2022 — Dec 2025",
+        period: "Nov 2022 - Dec 2025",
         role: "Social Media Marketing Specialist",
         company: "CV Maha Niaga Artha",
         bullets: [
@@ -432,7 +432,7 @@ export const content = {
         title: "QRIS Dynamic API",
         summary: "REST API to generate dynamic QRIS from a static code with customizable amount.",
         bullets: [
-          "JSON POST endpoint — send static QRIS + amount, get a ready-to-scan dynamic QRIS.",
+          "JSON POST endpoint - send static QRIS + amount, get a ready-to-scan dynamic QRIS.",
           "Used for payment, donation, or top-up integrations across internal systems.",
         ],
         stack: ["REST API", "JSON", "QRIS"],

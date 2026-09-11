@@ -3,7 +3,7 @@ import { QRIS_CONFIG } from "./qris-config";
 
 /**
  * Server function buat bikin QRIS dinamis.
- * Proxy ke https://anggeraji.web.id/qris/api dari server — biar gak kena CORS.
+ * Proxy ke https://anggeraji.web.id/qris/api dari server - biar gak kena CORS.
  * Server functions di project ini udah dilindungi CSRF middleware (lihat src/start.ts).
  */
 export const generateQris = createServerFn({ method: "POST" })
@@ -12,7 +12,7 @@ export const generateQris = createServerFn({ method: "POST" })
       throw new Error("Nominal tidak valid");
     }
     if (d.amount < 1 || d.amount > 100_000_000) {
-      throw new Error("Nominal di luar batas (Rp1 – Rp100.000.000)");
+      throw new Error("Nominal di luar batas (Rp1 - Rp100.000.000)");
     }
     return { amount: Math.round(d.amount) };
   })

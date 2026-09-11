@@ -562,7 +562,7 @@ function Index() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
                 {t.impactKicker}
               </p>
-              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+              <h2 className="mt-2 text-xl font-bold tracking-tight sm:text-2xl">
                 {t.impactTitle}
               </h2>
             </div>
@@ -573,7 +573,7 @@ function Index() {
                 key={s.label}
                 className="rounded-xl border border-ink/15 bg-background p-4 text-center"
               >
-                <p className="text-2xl font-black tracking-tight text-primary sm:text-3xl">
+                <p className="text-xl font-black tracking-tight text-primary sm:text-2xl">
                   {s.value}
                 </p>
                 <p className="mt-1 text-[11px] leading-snug text-muted-foreground sm:text-xs">
@@ -591,7 +591,7 @@ function Index() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
             {t.ctaKicker}
           </p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="mt-3 text-xl font-bold tracking-tight sm:text-2xl">
             {t.ctaTitle}
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-80 sm:text-[15px]">
@@ -631,7 +631,7 @@ function Index() {
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-6 sm:px-8">
           <div className="flex min-w-0 items-center gap-3">
             <Mark />
-            <span className="truncate text-sm font-medium">Angger Aji Prayogo — 2026</span>
+            <span className="truncate text-sm font-medium">Angger Aji Prayogo - 2026</span>
           </div>
           <span className="hidden select-none text-[12px] text-muted-foreground sm:inline">
             <Coins className="mr-1 inline h-3.5 w-3.5" />
