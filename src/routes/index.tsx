@@ -15,6 +15,11 @@ import {
   MapPin,
   Languages,
   Coins,
+  Users,
+  Eye,
+  Package,
+  CalendarClock,
+  BarChart3,
 } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import { content, type Lang } from "@/lib/cv-content";
@@ -557,30 +562,45 @@ function Index() {
       {/* Impact */}
       <Section id="impact" className="border-t border-ink/15">
         <div className="rounded-2xl border border-ink/25 bg-card p-6 sm:p-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.4fr] lg:items-center">
+            <div className="relative pl-5">
+              <span className="absolute left-0 top-1 h-10 w-1 rounded-full bg-primary" />
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
                 {t.impactKicker}
               </p>
               <h2 className="mt-2 text-xl font-bold tracking-tight sm:text-2xl">
                 {t.impactTitle}
               </h2>
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                {t.impactBody}
+              </p>
             </div>
-          </div>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {t.impactStats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-xl border border-ink/15 bg-background p-4 text-center"
-              >
-                <p className="text-xl font-black tracking-tight text-primary sm:text-2xl">
-                  {s.value}
-                </p>
-                <p className="mt-1 text-[11px] leading-snug text-muted-foreground sm:text-xs">
-                  {s.label}
-                </p>
-              </div>
-            ))}
+
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              {t.impactStats.map((s, i) => (
+                <div
+                  key={s.label}
+                  className="relative rounded-xl border border-ink/15 bg-background p-4 sm:p-5"
+                >
+                  <span className="grid h-9 w-9 select-none place-items-center rounded-lg bg-primary/10 text-primary">
+                    {
+                      [
+                        <Users key="u" className="h-4.5 w-4.5" />,
+                        <Eye key="e" className="h-4.5 w-4.5" />,
+                        <Package key="p" className="h-4.5 w-4.5" />,
+                        <CalendarClock key="c" className="h-4.5 w-4.5" />,
+                      ][i]
+                    }
+                  </span>
+                  <p className="mt-2 text-xl font-black tracking-tight text-ink sm:text-2xl">
+                    {s.value}
+                  </p>
+                  <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground sm:text-xs">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Section>

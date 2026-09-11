@@ -63,9 +63,9 @@ export const content = {
     marketing: "Digital Marketing",
     softskill: "Softskill",
     education: "Pendidikan",
-    graduated: "Lulus 2024",
-    school: "SMK Negeri 1 Kudus",
-    schoolCity: "Kudus, Jawa Tengah",
+    graduated: "Lulus 2022",
+    school: "SMK Hasan Kafrawi",
+    schoolCity: "Mayong, Jepara, Jawa Tengah",
     extra: "Informasi Tambahan",
     languagesLabel: "Bahasa",
     languagesValue: "Bahasa Indonesia · Bahasa Inggris",
@@ -76,6 +76,8 @@ export const content = {
     workSubtitle: "Sistem dan produk digital yang dikembangkan untuk kebutuhan bisnis nyata.",
     impactKicker: "Dampak",
     impactTitle: "Angka yang Bicara",
+    impactBody:
+      "Hasil terukur dari sistem internal dan strategi konten yang saya bangun.",
     impactStats: [
       { value: "30K+", label: "Follower baru dalam 1 bulan" },
       { value: "8Jt", label: "Peak views per bulan" },
@@ -94,7 +96,7 @@ export const content = {
       {
         period: "Des 2025 - Sekarang",
         role: "PHP Web Developer",
-        company: "CV Maha Niaga Artha",
+        company: "Stealth Company",
         bullets: [
           "Membangun CRM Leads - dari flow lead hingga handle customer, lengkap dengan data analisis - dalam 1 bulan.",
           "Membangun sistem inventaris dalam 6 minggu: mengelola 376 item + sub item dan mendukung proses stock opname.",
@@ -111,7 +113,7 @@ export const content = {
       {
         period: "Nov 2022 - Des 2025",
         role: "Social Media Marketing Specialist",
-        company: "CV Maha Niaga Artha",
+        company: "Stealth Company",
         bullets: [
           "Menyusun strategi dan perencanaan konten untuk 13 brand F&B yang dikelola.",
           "Mengelola kalender konten dengan rata-rata 60+ konten terjadwal per bulan lintas platform.",
@@ -304,9 +306,9 @@ export const content = {
     marketing: "Digital Marketing",
     softskill: "Soft Skills",
     education: "Education",
-    graduated: "Class of 2024",
-    school: "SMK Negeri 1 Kudus",
-    schoolCity: "Kudus, Central Java",
+    graduated: "Class of 2022",
+    school: "SMK Hasan Kafrawi",
+    schoolCity: "Mayong, Jepara, Central Java",
     extra: "Additional Information",
     languagesLabel: "Languages",
     languagesValue: "Indonesian · English",
@@ -317,6 +319,8 @@ export const content = {
     workSubtitle: "Systems and digital products built for real business needs.",
     impactKicker: "Impact",
     impactTitle: "Numbers That Speak",
+    impactBody:
+      "Measurable results from the internal systems and content strategies I built.",
     impactStats: [
       { value: "30K+", label: "New followers in one month" },
       { value: "8M", label: "Peak views per month" },
@@ -335,7 +339,7 @@ export const content = {
       {
         period: "Dec 2025 - Present",
         role: "PHP Web Developer",
-        company: "CV Maha Niaga Artha",
+        company: "Stealth Company",
         bullets: [
           "Built a CRM Leads system - from lead flow to customer handling with data analytics - in 1 month.",
           "Built the inventory system in 6 weeks: managing 376 items + sub-items and supporting stock opname.",
@@ -352,7 +356,7 @@ export const content = {
       {
         period: "Nov 2022 - Dec 2025",
         role: "Social Media Marketing Specialist",
-        company: "CV Maha Niaga Artha",
+        company: "Stealth Company",
         bullets: [
           "Developed content strategy and planning across 13 F&B brands.",
           "Managed the content calendar with an average of 60+ scheduled posts per month across platforms.",
