@@ -74,6 +74,21 @@ export const content = {
       "Web Development · Programming · CRM · Digital Marketing · Social Media · Content Strategy",
     workTitle: "Proyek Terpilih",
     workSubtitle: "Sistem dan produk digital yang dikembangkan untuk kebutuhan bisnis nyata.",
+    impactKicker: "Dampak",
+    impactTitle: "Angka yang Bicara",
+    impactStats: [
+      { value: "30K+", label: "Follower baru dalam 1 bulan" },
+      { value: "8Jt", label: "Peak views per bulan" },
+      { value: "376", label: "Item inventaris dikelola" },
+      { value: "60+", label: "Konten terjadwal per bulan" },
+    ],
+    ctaKicker: "Kolaborasi",
+    ctaTitle: "Mari Bekerja Sama",
+    ctaBody:
+      "Punya proyek, butuh sistem internal, atau mau mengembangkan brand? Ceritakan kebutuhanmu — saya bantu wujudkan.",
+    ctaWhatsapp: "Chat WhatsApp",
+    ctaEmail: "Kirim Email",
+    ctaDownload: "Download CV",
     present: "Sekarang",
     jobs: [
       {
@@ -300,6 +315,21 @@ export const content = {
       "Web Development · Programming · CRM · Digital Marketing · Social Media · Content Strategy",
     workTitle: "Selected Work",
     workSubtitle: "Systems and digital products built for real business needs.",
+    impactKicker: "Impact",
+    impactTitle: "Numbers That Speak",
+    impactStats: [
+      { value: "30K+", label: "New followers in one month" },
+      { value: "8M", label: "Peak views per month" },
+      { value: "376", label: "Inventory items managed" },
+      { value: "60+", label: "Scheduled posts per month" },
+    ],
+    ctaKicker: "Collaboration",
+    ctaTitle: "Let's Work Together",
+    ctaBody:
+      "Have a project, need an internal system, or want to grow a brand? Tell me what you need — I'll help you build it.",
+    ctaWhatsapp: "Chat on WhatsApp",
+    ctaEmail: "Send Email",
+    ctaDownload: "Download CV",
     present: "Present",
     jobs: [
       {

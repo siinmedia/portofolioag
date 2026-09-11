@@ -554,6 +554,79 @@ function Index() {
         </div>
       </Section>
 
+      {/* Impact */}
+      <Section id="impact" className="border-t border-ink/15">
+        <div className="rounded-2xl border border-ink/25 bg-card p-6 sm:p-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
+                {t.impactKicker}
+              </p>
+              <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+                {t.impactTitle}
+              </h2>
+            </div>
+          </div>
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {t.impactStats.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-xl border border-ink/15 bg-background p-4 text-center"
+              >
+                <p className="text-2xl font-black tracking-tight text-primary sm:text-3xl">
+                  {s.value}
+                </p>
+                <p className="mt-1 text-[11px] leading-snug text-muted-foreground sm:text-xs">
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section id="contact" className="border-t border-ink/15">
+        <div className="rounded-2xl bg-ink p-6 text-ink-foreground sm:p-10">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary sm:text-xs">
+            {t.ctaKicker}
+          </p>
+          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-4xl">
+            {t.ctaTitle}
+          </h2>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-80 sm:text-[15px]">
+            {t.ctaBody}
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href={t.contact.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg active:scale-95"
+            >
+              <Phone className="h-4 w-4" />
+              {t.ctaWhatsapp}
+            </a>
+            <a
+              href={`mailto:${t.contact.email}`}
+              className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/40 px-5 py-2.5 text-sm font-semibold text-ink-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-ink-foreground hover:shadow-lg active:scale-95"
+            >
+              <Mail className="h-4 w-4" />
+              {t.ctaEmail}
+            </a>
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/40 px-5 py-2.5 text-sm font-semibold text-ink-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-ink-foreground hover:shadow-lg active:scale-95"
+            >
+              <FileText className="h-4 w-4" />
+              {t.ctaDownload}
+            </a>
+          </div>
+        </div>
+      </Section>
+
       <footer className="border-t border-ink/15 bg-background/80 backdrop-blur">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-6 sm:px-8">
           <div className="flex min-w-0 items-center gap-3">
