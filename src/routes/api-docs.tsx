@@ -15,11 +15,11 @@ import { QRIS_CONFIG } from "@/lib/qris-config";
 export const Route = createFileRoute("/api-docs")({
   head: () => ({
     meta: [
-      { title: "API Documentation - QRIS | Angger Aji Prayogo" },
+      { title: "API Documentation · QRIS | Angger Aji Prayogo" },
       {
         name: "description",
         content:
-          "Dokumentasi API QRIS Angger Aji Prayogo - endpoint, request & response untuk integrasi QRIS dinamis.",
+          "Dokumentasi API QRIS Angger Aji Prayogo: endpoint, request & response untuk integrasi QRIS dinamis.",
       },
     ],
   }),
@@ -226,7 +226,7 @@ Content-Type: application/json
           {qrisConfigured ? (
             <>
               <Server className="h-4 w-4" />
-              Konfigurasi QRIS aktif - endpoint siap dipakai.
+              Konfigurasi QRIS aktif, endpoint siap dipakai.
             </>
           ) : (
             <>
@@ -318,7 +318,7 @@ Content-Type: application/json
         <div className="mt-12">
           <h2 className="text-xl font-bold tracking-tight">Contoh Integrasi</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Panggil endpoint dari JavaScript client - cukup satu kali fetch:
+            Panggil endpoint dari JavaScript client, cukup satu kali fetch:
           </p>
           <div className="mt-4">
             <CodeBlock
@@ -348,7 +348,7 @@ console.log(data.qris_string);`}
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-6 sm:px-8">
           <div className="flex min-w-0 items-center gap-3">
             <Mark />
-            <span className="truncate text-sm font-medium">Angger Aji Prayogo - 2026</span>
+            <span className="truncate text-sm font-medium">Angger Aji Prayogo · 2026</span>
           </div>
           <Link
             to="/"

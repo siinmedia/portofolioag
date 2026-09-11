@@ -651,7 +651,7 @@ function Index() {
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-6 sm:px-8">
           <div className="flex min-w-0 items-center gap-3">
             <Mark />
-            <span className="truncate text-sm font-medium">Angger Aji Prayogo - 2026</span>
+            <span className="truncate text-sm font-medium">Angger Aji Prayogo · 2026</span>
           </div>
           <span className="hidden select-none text-[12px] text-muted-foreground sm:inline">
             <Coins className="mr-1 inline h-3.5 w-3.5" />

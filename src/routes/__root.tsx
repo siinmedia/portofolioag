@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Angger Aji Prayogo - Web Developer & Digital Marketing" },
+      { title: "Angger Aji Prayogo · Web Developer & Digital Marketing" },
       {
         name: "description",
         content:
-          "CV Angger Aji Prayogo: Web Developer dan Digital Marketing Specialist - CRM, sistem internal, landing page, dan strategi konten media sosial.",
+          "CV Angger Aji Prayogo: Web Developer dan Digital Marketing Specialist, CRM, sistem internal, landing page, dan strategi konten media sosial.",
       },
       { name: "author", content: "Angger Aji Prayogo" },
-      { property: "og:title", content: "Angger Aji Prayogo - Web Developer & Digital Marketing" },
+      { property: "og:title", content: "Angger Aji Prayogo · Web Developer & Digital Marketing" },
       {
         property: "og:description",
         content: "CRM, sistem internal, landing page, dan strategi konten media sosial.",

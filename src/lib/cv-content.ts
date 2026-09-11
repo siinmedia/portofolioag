@@ -29,7 +29,7 @@ export const content = {
     hello: "Halo,",
     myName: ["Nama saya", "Angger"],
     photoCaption:
-      "Dari strategi konten ke sistem yang benar-benar dipakai - solusi digital yang efektif untuk kebutuhan bisnis.",
+      "Dari strategi konten sampai sistem yang benar-benar dipakai bisnis.",
     introduction: "Perkenalan",
     introTitle: "Web Developer & Digital Marketing Specialist",
     introBody: [
@@ -87,18 +87,18 @@ export const content = {
     ctaKicker: "Kolaborasi",
     ctaTitle: "Mari Bekerja Sama",
     ctaBody:
-      "Punya proyek, butuh sistem internal, atau mau mengembangkan brand? Ceritakan kebutuhanmu - saya bantu wujudkan.",
+      "Punya proyek, butuh sistem internal, atau mau mengembangkan brand? Ceritakan kebutuhanmu, saya bantu wujudkan.",
     ctaWhatsapp: "Chat WhatsApp",
     ctaEmail: "Kirim Email",
     ctaDownload: "Download CV",
     present: "Sekarang",
     jobs: [
       {
-        period: "Des 2025 - Sekarang",
+        period: "Des 2025 s.d. Sekarang",
         role: "PHP Web Developer",
         company: "Stealth Company",
         bullets: [
-          "Membangun CRM Leads - dari flow lead hingga handle customer, lengkap dengan data analisis - dalam 1 bulan.",
+          "Membangun CRM Leads dari alur lead sampai handle customer, lengkap dengan data analisis, dalam 1 bulan.",
           "Membangun sistem inventaris dalam 6 minggu: mengelola 376 item + sub item dan mendukung proses stock opname.",
           "Membangun sistem perencanaan konten dalam 2 minggu dengan flow multi-role & multi-account serta data analisis lengkap.",
           "Membangun HRIS KPI dalam 4 minggu: flow HR, absensi, dan payroll dengan notifikasi email + setup Meta WABA.",
@@ -111,7 +111,7 @@ export const content = {
         footerItems: ["CRM Leads", "Sistem Inventaris Internal", "Sistem Perencanaan Konten", "HRIS KPI"],
       },
       {
-        period: "Nov 2022 - Des 2025",
+        period: "Nov 2022 s.d. Des 2025",
         role: "Social Media Marketing Specialist",
         company: "Stealth Company",
         bullets: [
@@ -138,11 +138,11 @@ export const content = {
       {
         index: "01",
         title: "CRM Leads Management",
-        summary: "Sistem manajemen leads dengan flow hingga handle customer.",
+        summary: "Sistem manajemen leads dengan alur sampai handle customer.",
         bullets: [
-          "CRM Leads dengan flow lengkap dari lead hingga handle customer.",
-          "Data analisis untuk memantau performa leads dan kebutuhan operasional.",
-          "Pengembangan fitur berdasarkan kebutuhan dan alur bisnis.",
+          "Alur lengkap dari lead masuk sampai handle customer.",
+          "Data analisis untuk memantau performa leads.",
+          "Fitur dibangun dari kebutuhan nyata alur bisnis.",
         ],
         stack: ["PHP", "Database", "CRM Leads"],
       },
@@ -171,8 +171,8 @@ export const content = {
         title: "Website & Landing Page",
         summary: "Halaman yang menggabungkan kebutuhan teknis dan tujuan pemasaran.",
         bullets: [
-          "Pengembangan website dan landing page untuk kebutuhan bisnis dan pemasaran.",
-          "Menggabungkan kebutuhan teknis dengan tujuan pemasaran dan komunikasi brand.",
+          "5+ landing page untuk kebutuhan perusahaan dan brand.",
+          "Struktur halaman mengikuti tujuan pemasaran tiap campaign.",
         ],
         stack: ["HTML & CSS", "JavaScript", "SEO"],
       },
@@ -181,8 +181,8 @@ export const content = {
         title: "TernoAE",
         summary: "Platform ride-hailing lokal dengan sistem booking dan pelacakan real-time.",
         bullets: [
-          "Platform ride-hailing lokal dengan booking dan pelacakan real-time.",
-          "Web app untuk kebutuhan transportasi dengan fokus pengalaman pengguna.",
+          "Platform ride-hailing lokal: booking dan pelacakan real-time.",
+          "Web app transportasi dengan alur booking yang simpel.",
         ],
         stack: ["PHP", "Web App", "Transportation"],
         url: "https://ternoae.web.id",
@@ -193,7 +193,7 @@ export const content = {
         title: "QRIS Dynamic API",
         summary: "REST API untuk generate QRIS dinamis dari kode statis dengan nominal yang bisa diatur.",
         bullets: [
-          "Endpoint POST JSON - kirim QRIS statis + nominal, terima QRIS dinamis siap scan.",
+          "Endpoint POST JSON: kirim QRIS statis + nominal, terima QRIS dinamis siap scan.",
           "Digunakan untuk integrasi pembayaran, donasi, atau top-up pada sistem internal.",
         ],
         stack: ["REST API", "JSON", "QRIS"],
@@ -272,7 +272,7 @@ export const content = {
     hello: "Hello,",
     myName: ["My name", "is Angger"],
     photoCaption:
-      "From content strategy to systems people actually use - effective digital solutions for real business needs.",
+      "From content strategy to systems businesses actually use.",
     introduction: "Introduction",
     introTitle: "Web Developer & Digital Marketing Specialist",
     introBody: [
@@ -330,18 +330,18 @@ export const content = {
     ctaKicker: "Collaboration",
     ctaTitle: "Let's Work Together",
     ctaBody:
-      "Have a project, need an internal system, or want to grow a brand? Tell me what you need - I'll help you build it.",
+      "Have a project, need an internal system, or want to grow a brand? Tell me what you need, and I'll help you build it.",
     ctaWhatsapp: "Chat on WhatsApp",
     ctaEmail: "Send Email",
     ctaDownload: "Download CV",
     present: "Present",
     jobs: [
       {
-        period: "Dec 2025 - Present",
+        period: "Dec 2025 to Present",
         role: "PHP Web Developer",
         company: "Stealth Company",
         bullets: [
-          "Built a CRM Leads system - from lead flow to customer handling with data analytics - in 1 month.",
+          "Built a CRM Leads system from lead flow to customer handling, with full analytics, in 1 month.",
           "Built the inventory system in 6 weeks: managing 376 items + sub-items and supporting stock opname.",
           "Built the content planning system in 2 weeks with multi-role & multi-account flows plus full data analytics.",
           "Built an HRIS KPI system in 4 weeks: HR, attendance, and payroll flows with email notifications + Meta WABA setup.",
@@ -354,7 +354,7 @@ export const content = {
         footerItems: ["CRM Leads", "Internal Inventory System", "Content Planning System", "HRIS KPI"],
       },
       {
-        period: "Nov 2022 - Dec 2025",
+        period: "Nov 2022 to Dec 2025",
         role: "Social Media Marketing Specialist",
         company: "Stealth Company",
         bullets: [
@@ -381,11 +381,11 @@ export const content = {
       {
         index: "01",
         title: "CRM Leads Management",
-        summary: "A leads management system with workflow through customer handling.",
+        summary: "A leads management system with a workflow through customer handling.",
         bullets: [
-          "CRM Leads with a complete flow from lead to customer handling.",
-          "Data analytics to monitor leads performance and operational needs.",
-          "Features developed around real business needs and workflows.",
+          "Complete flow from lead to customer handling.",
+          "Analytics to monitor leads performance.",
+          "Features built around real business workflows.",
         ],
         stack: ["PHP", "Database", "CRM Leads"],
       },
@@ -414,8 +414,8 @@ export const content = {
         title: "Website & Landing Page",
         summary: "Pages that combine technical needs with marketing goals.",
         bullets: [
-          "Developed websites and landing pages for business and marketing needs.",
-          "Combined technical requirements with marketing and brand communication goals.",
+          "5+ landing pages for company and brand needs.",
+          "Page structure follows each campaign's marketing goals.",
         ],
         stack: ["HTML & CSS", "JavaScript", "SEO"],
       },
@@ -424,8 +424,8 @@ export const content = {
         title: "TernoAE",
         summary: "Local ride-hailing platform with real-time booking and tracking system.",
         bullets: [
-          "Local ride-hailing platform with real-time booking and tracking.",
-          "Web app built for transportation, focused on user experience.",
+          "Local ride-hailing platform: real-time booking and tracking.",
+          "Transport web app with a simple booking flow.",
         ],
         stack: ["PHP", "Web App", "Transportation"],
         url: "https://ternoae.web.id",
@@ -436,7 +436,7 @@ export const content = {
         title: "QRIS Dynamic API",
         summary: "REST API to generate dynamic QRIS from a static code with customizable amount.",
         bullets: [
-          "JSON POST endpoint - send static QRIS + amount, get a ready-to-scan dynamic QRIS.",
+          "JSON POST endpoint: send static QRIS + amount, get a ready-to-scan dynamic QRIS.",
           "Used for payment, donation, or top-up integrations across internal systems.",
         ],
         stack: ["REST API", "JSON", "QRIS"],
