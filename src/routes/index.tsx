@@ -739,15 +739,15 @@ function Index() {
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.projects.map((p, i) => {
             const spanClass = [
-              "sm:col-span-2 lg:col-span-2", // 01 CRM Leads - besar kiri (baris 1)
-              "sm:col-span-1 lg:col-span-1", // 02 Inventaris - kecil kanan (baris 1)
-              "sm:col-span-1 lg:col-span-1", // 03 Konten - kecil kiri (baris 2)
-              "sm:col-span-2 lg:col-span-2", // 04 Landing Page - besar kanan (baris 2)
-              "sm:col-span-1 lg:col-span-2", // 05 TernoAE - besar kiri (baris 3)
-              "sm:col-span-1 lg:col-span-1", // 06 QRIS API - kecil kanan (baris 3)
-              "sm:col-span-2 lg:col-span-3", // 07 Analitik Konten - full width (baris 4)
+              "sm:col-span-2 lg:col-span-2", // 01 CRM Leads - besar (baris 1)
+              "sm:col-span-1 lg:col-span-1", // 02 Inventaris (baris 1)
+              "sm:col-span-1 lg:col-span-1", // 03 Konten (baris 2)
+              "sm:col-span-2 lg:col-span-2", // 04 Landing Page - besar (baris 2)
+              "sm:col-span-1 lg:col-span-1", // 05 TernoAE (baris 3)
+              "sm:col-span-1 lg:col-span-1", // 06 QRIS API (baris 3)
+              "sm:col-span-2 lg:col-span-1", // 07 Analitik Konten (baris 3)
             ][i] ?? "";
-            const large = i === 0 || i === 3 || i === 4;
+            const large = i === 0 || i === 3;
             return (
               <ProjectCard
                 key={p.title}
@@ -822,7 +822,7 @@ function ProjectCard({
           />
         ) : null}
       </div>
-      <div className={`flex flex-1 flex-col ${large ? "mt-6" : "mt-4"}`}>
+      <div className={`flex flex-1 flex-col ${large ? "mt-4" : "mt-3"}`}>
         <h3
           className={`font-bold leading-tight tracking-tight ${
             featured ? "text-2xl sm:text-3xl" : large ? "text-xl sm:text-2xl" : "text-lg"
@@ -831,14 +831,14 @@ function ProjectCard({
           {project.title}
         </h3>
         <p
-          className={`mt-2 leading-relaxed opacity-80 ${
+          className={`mt-1.5 leading-relaxed opacity-80 ${
             large ? "text-sm sm:text-[15px]" : "text-[13px] sm:text-sm"
           }`}
         >
           {project.summary}
         </p>
         <ul
-          className={`mt-3 space-y-1.5 leading-relaxed opacity-75 ${
+          className={`mt-2.5 space-y-1 leading-relaxed opacity-75 ${
             large ? "text-[13.5px] sm:text-sm" : "text-[12.5px]"
           }`}
         >
@@ -850,18 +850,18 @@ function ProjectCard({
           ))}
         </ul>
       </div>
-      <div className="mt-4">
+      <div className="mt-3">
         <div className="flex flex-wrap gap-1.5">
           {project.stack.map((s) => (
             <span
               key={s}
-              className="select-none rounded-full border border-current/30 px-2.5 py-1 text-[11px] opacity-80"
+              className="select-none rounded-full border border-current/30 px-2.5 py-0.5 text-[11px] opacity-80"
             >
               {s}
             </span>
           ))}
         </div>
-        <div className="mt-4 flex flex-wrap items-center gap-2">
+        <div className="mt-3 flex flex-wrap items-center gap-2">
           {url && cta ? (
             <>
               {internal ? (
@@ -902,7 +902,7 @@ function ProjectCard({
   );
 
   return (
-    <article className={`group flex h-full flex-col rounded-2xl p-5 ${tone} ${interactive} ${spanClass}`}>
+    <article className={`group flex h-full flex-col rounded-2xl p-4 ${tone} ${interactive} ${spanClass}`}>
       {inner}
     </article>
   );
